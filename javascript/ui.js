@@ -1,6 +1,8 @@
+let myvar;
 class Ui {
     constructor() {
         this.show = document.querySelector('#show');
+        
         // let currentalert = document.querySelector('.alert');
         // console.log(currentalert);
     }
@@ -43,26 +45,27 @@ class Ui {
 
     showalert(message, classname) {
         this.show.innerHTML = ""
-        // this.removealert();
+        removealert();
         let div = document.createElement('div');
         div.className = `alert ${classname} `;
         let container = document.querySelector('.container');
         let showcard = document.querySelector('.showcard');
         div.appendChild(document.createTextNode(message));
         container.insertBefore(div, showcard);
-
-        setTimeout(function () {
+        
+       myvar =  setTimeout(function () {
             document.querySelector('.alert').remove();
         }, 2000);  
 
     }
 
-    // removealert(){
-    //     let currentalert = document.querySelector('.alert');
-    //     // console.log(currentalert);
-    //     if(this.currentalert){   
-    //         currentalert.remove();
-    //     }
-    // }
+  
 
+}
+function removealert(){
+    let currentdiv = document.querySelector('.alert');
+    if(currentdiv){
+        currentdiv.remove();
+    }
+    clearTimeout(myvar);
 }
