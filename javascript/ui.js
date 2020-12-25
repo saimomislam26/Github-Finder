@@ -13,7 +13,7 @@ class Ui {
             <div class="row">
                 <div class="col-3 m-auto">
                     <img class = "img-fluid " src="${info.avatar_url}" alt="image ">
-                    <a href="${info.html_url}" target="_blank" class="btn btn-primary u-full-width ">View Profile</a>
+                    <a href="${info.html_url}" target="_blank" class="btn btn-primary u-full-width " id = "font">View Profile</a>
                 </div>
             </div>
             <hr>
